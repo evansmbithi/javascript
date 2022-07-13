@@ -31,7 +31,6 @@ figure {
   font-family: "Oswald", sans-serif;
   font-size: 5rem;
   font-weight: 200;
-  /* position: relative; */
 }
 
 .siteheader:after {
@@ -182,10 +181,10 @@ a:hover{
 .small-screen{
   display: none;
   visibility: hidden;
-  height: 100vh;
-  width: 100vw;
+  height: 120vh;
+  min-width: 100%;
   text-align: center;
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   background-color: #fff;
@@ -193,8 +192,7 @@ a:hover{
 }
 
 .small-screen h3{
-  display: block;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 2rem;
   margin: 30vh auto;
 }
@@ -211,7 +209,6 @@ a:hover{
   .small-screen{
     display: block;    
     visibility: visible;
-    overflow: hidden; 
-    
+    overflow: hidden;     
   }
 }
