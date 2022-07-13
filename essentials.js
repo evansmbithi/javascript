@@ -124,12 +124,12 @@ const content = `
 
 const main = document.querySelector(".maincontent");
 
-const newArticle = document.createElement("article");
-newArticle.classList.add("backpack");
-newArticle.setAttribute("id", "everyday");
+const newArticle = document.createElement("article"); // create an <article> element
+newArticle.classList.add("backpack"); // add a 'backpack' class to the new element
+newArticle.setAttribute("id", "everyday"); // add id='everyday' attribute to the new element
 newArticle.innerHTML = content;
 
-main.append(newArticle);
+main.append(newArticle); // parent.append() appends
 
 /**
  * Challenge: Add a new element
@@ -158,4 +158,5 @@ navlist.classList.add("nav-group")
 navlist.innerHTML = nav;
 
 navbar.append(navlist)
-header.append(navbar);
+// header.append(navbar);
+main.insertAdjacentElement('beforebegin', navbar) // place navbar before main element
