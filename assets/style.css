@@ -22,7 +22,7 @@ figure {
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  
+  position: relative;
 }
 
 .site-title {
@@ -31,7 +31,7 @@ figure {
   font-family: "Oswald", sans-serif;
   font-size: 5rem;
   font-weight: 200;
-  position: relative;
+  /* position: relative; */
 }
 
 .siteheader:after {
@@ -182,29 +182,36 @@ a:hover{
 .small-screen{
   display: none;
   visibility: hidden;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 1000;
 }
 
 .small-screen h3{
-  font-size: 1.2rem;
-  padding: 1.2rem;
+  display: block;
+  font-size: 1rem;
+  padding: 2rem;
+  margin: 30vh auto;
 }
 
-@media (max-width: 1028px) {
+@media screen and (max-width: 1028px) {
   body{
     overflow: hidden;
   }
 
+  nav{
+    display: none;
+  }
+
   .small-screen{
-    display: flex;
+    display: block;    
     visibility: visible;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    background-color: #fff;
-    /* z-index: 1000; */
+    overflow: hidden; 
+    
   }
 }

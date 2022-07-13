@@ -150,13 +150,37 @@ const nav = `
     
 `;
 
-const header = document.querySelector("header")
-
 const navbar = document.createElement("nav")
 const navlist = document.createElement("ul")
 navlist.classList.add("nav-group")
 navlist.innerHTML = nav;
-
 navbar.append(navlist)
-// header.append(navbar);
-main.insertAdjacentElement('beforebegin', navbar) // place navbar before main element
+
+// place navbar before main element
+main.insertAdjacentElement('beforebegin', navbar) 
+
+// Display message on small screens
+const message = `
+    <h3>Sorry: this content is only available for wider screens!</h3>
+`;
+
+const header = document.querySelector("header")
+const footer = document.querySelector("footer")
+
+const smallScreen = document.createElement("div")
+smallScreen.classList.add("small-screen")
+smallScreen.innerHTML = message
+
+// append element before the header
+/**
+ * it's a good idea to have the small screen message at the top
+ * because javascript will be loaded and executed last and
+ * placing the new element at the end will not display as required
+ * because the HTML would have been rendered and displayed 
+ */
+header.insertAdjacentElement('beforebegin', smallScreen)
+
+// append element after the footer
+// footer.insertAdjacentElement('afterend', smallScreen)
+
+
