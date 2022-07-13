@@ -7,7 +7,9 @@ class Defaultpack {
       pocketNum,
       strapLengthL,
       strapLengthR,
-      lidOpen
+      lidOpen,
+      dateAcquired,
+      image
     ) {
       // Define properties:
       this.name = name;
@@ -19,6 +21,8 @@ class Defaultpack {
         right: strapLengthR,
       };
       this.lidOpen = lidOpen;
+      this.dateAcquired = dateAcquired;
+      this.image = image;
     }
     // Add methods like normal functions:
     toggleLid(lidStatus) {
@@ -27,6 +31,13 @@ class Defaultpack {
     newStrapLength(lengthLeft, lengthRight) {
       this.strapLength.left = lengthLeft;
       this.strapLength.right = lengthRight;
+    }
+    backpackAge() {
+      let now = new Date();
+      let acquired = new Date(this.dateAcquired);
+      let elapsed = now - acquired; // elapsed time in milliseconds
+      let daysSinceAcquired = Math.floor(elapsed / (1000 * 3600 * 24));
+      return daysSinceAcquired;
     }
   }
   
