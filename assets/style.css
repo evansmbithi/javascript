@@ -205,6 +205,6 @@ a:hover{
     height: 100vh;
     width: 100%;
     background-color: #fff;
-    z-index: 1000;
+    /* z-index: 1000; */
   }
 }
