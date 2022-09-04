@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>video try-out</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="videoBoxMacro" bis_skin_checked="1">
+      <div class="videoContainer" bis_skin_checked="1">
+        <center class="thumbnailImageContainer">
+          <picture
+            class="frontImg"
+            onclick="revealVideo('yAECE0GT3DAbox', 'yAECE0GT3DAyoutubeBox');  setVideoUrl('yAECE0GT3DAyoutubeBox', 'https://www.youtube.com/embed/yAECE0GT3DA?autoplay=1');"
+          >
+            <source
+              data-src="https://www.jobtestprep.co.uk/app_images/youTubePlayBtn.webp"
+              srcset="
+                https://www.jobtestprep.co.uk/app_images/youTubePlayBtn.webp
+              "
+              type="image/webp"
+            />
+            <img
+              class="videoPlayImage"
+              src="https://www.jobtestprep.co.uk/app_images/youTubePlayBtn.webp"
+              data-src="https://www.jobtestprep.co.uk/app_images/youTubePlayBtn.webp"
+              alt="Play"
+              width="100"
+              height="78"
+            />
+          </picture>
+          <picture class="backImg videoBoxImage">
+            <source
+              data-src="//i.ytimg.com/vi_webp/yAECE0GT3DA/0.webp"
+              srcset="//i.ytimg.com/vi_webp/yAECE0GT3DA/0.webp"
+              type="image/webp"
+            />
+            <img
+              src="https://img.youtube.com/vi/yAECE0GT3DA/hqdefault.jpg"
+              data-src="https://img.youtube.com/vi/yAECE0GT3DA/hqdefault.jpg"
+              alt="SHL YouTube Video"
+              style=""
+              width="480"
+              height="360"
+            />
+          </picture>
+          <div class="expertVideoTag" bis_skin_checked="1">
+            SHL YouTube Video
+          </div>
+        </center>
+      </div>
+    </div>
+
+    <div
+      id="yAECE0GT3DAbox"
+      class="lightbox"
+      onclick="hideVideo('yAECE0GT3DAbox', 'yAECE0GT3DAyoutubeBox');"
+      bis_skin_checked="1"
+      style="display: none"
+    >
+      <div class="lightbox-container" bis_skin_checked="1">
+        <div class="lightbox-content" bis_skin_checked="1">
+          <button
+            onclick="hideVideo('yAECE0GT3DAbox','yAECE0GT3DAyoutubeBox')"
+            class="lightbox-close"
+          >
+            <span>Close</span><span> | ✕</span>
+          </button>
+          <div class="video-container" bis_skin_checked="1">
+            <iframe
+              id="yAECE0GT3DAyoutubeBox"
+              src="https://www.youtube.com/embed/yAECE0GT3DA"
+              allowfullscreen=""
+              allow="autoplay"
+              frameborder="0"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
