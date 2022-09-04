@@ -64,7 +64,7 @@ figure {
   width: 4rem;
 }
 
-nav{
+nav {
   /* sticky navbar will turn fixed once the top value (10px) is met */
   background-color: #000;
   width: 95%;
@@ -74,21 +74,21 @@ nav{
   text-align: center;
 }
 
-.nav-group{
+.nav-group {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   list-style: none;
   padding: 20px;
   margin-bottom: 6rem;
 }
 
 a:link,
-a:visited{
+a:visited {
   text-decoration: none;
   color: #fff;
 }
 
-a:hover{
+a:hover {
   text-decoration-line: underline;
 }
 
@@ -113,6 +113,7 @@ a:hover{
 
 .backpack__image {
   grid-row: span 2;
+  height: 40vh;
 }
 
 .backpack__name {
@@ -178,7 +179,7 @@ a:hover{
   color: white;
 }
 
-.small-screen{
+.small-screen {
   display: none;
   visibility: hidden;
   height: 120vh;
@@ -191,24 +192,24 @@ a:hover{
   z-index: 1000;
 }
 
-.small-screen h3{
+.small-screen h3 {
   font-size: 1.2rem;
   padding: 2rem;
   margin: 30vh auto;
 }
 
 @media screen and (max-width: 1028px) {
-  body{
+  body {
     overflow: hidden;
   }
 
-  nav{
+  nav {
     display: none;
   }
 
-  .small-screen{
-    display: block;    
+  .small-screen {
+    display: block;
     visibility: visible;
-    overflow: hidden;     
+    overflow: hidden;
   }
 }

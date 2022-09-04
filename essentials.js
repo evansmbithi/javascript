@@ -184,3 +184,77 @@ header.insertAdjacentElement('beforebegin', smallScreen)
 // footer.insertAdjacentElement('afterend', smallScreen)
 
 
+// ARRAY METHODS
+let backpackContents = ["piggy", "headlamp", "pen"];
+
+console.log(backpackContents);
+
+backpackContents.forEach(function (item) {
+  item = `<li>${item}</li>`;
+  console.log(item);
+});
+
+/**
+ * find the first item that meets our parameters and the parameters are defined inside a custom function. 
+ * The function grabs each item in turn, and then it says, if this item has a length that is bigger than or equal to five, 
+ * meaning there are five or more characters in that item, then return the item. And this will return the first item that meets this requirement.
+ */
+
+let longItems = backpackContents.find(function (item) {
+  if (item.length >= 5) {
+    return item;
+  }
+});
+console.log("longItems:", longItems);
+
+/**
+ * Solution: Build and modify an array
+ * - Build an array with 8 items
+ * - Remove the last item
+ * - Add the last item as the first item on the array
+ * - Sort the items by alphabetical order
+ * - Use the find() method to find a specific item in the array
+ * - Remove the item you found using the find method from the array.
+ */
+
+ const deskArray = [
+  "pen",
+  "camera",
+  "phone",
+  "notebook",
+  "headphones",
+  "lightbulb",
+  "USB drive",
+];
+console.log("Original array:", deskArray);
+
+// Remove the last item:
+// @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
+// deskArray.pop(); 
+// console.log(deskArray.pop());//the pop method takes the last item off and returns it to us.
+// console.log("New array:", deskArray);
+
+// Add last item as the first item on the array:
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
+// deskArray.unshift(deskArray.pop());
+// console.log("Last item is now first:", deskArray);
+
+// Sort items by alphabetical order:
+// @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+// deskArray.sort();
+// console.log("Sorted array:", deskArray); // Capitalized letters are sorted before lowercase letters. 
+
+// Find "notebook":
+// @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+// const foundItem = deskArray.find((item) => item === "notebook"); //callback function that loops through all the items and returns only the item that matches the query
+// console.log("Found item:", foundItem);
+
+// Find and remove an item:
+// @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+// @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
+// let remove = "notebook";
+// splice(index of current item, number of items)
+// deskArray.splice(deskArray.indexOf(remove), 1); //pass in the index number for the current value and the number of items to remove.
+// console.log(`Array with "${remove}" removed:`, deskArray);
+
+
