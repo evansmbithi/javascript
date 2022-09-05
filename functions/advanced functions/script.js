@@ -16,39 +16,41 @@ const main = document.querySelector(".maincontent");
 
 console.log(backpackObjectArray);
 
-const myView = backpackObjectArray.map((item) => {
-  const newArticle = document.createElement("article");
-  newArticle.classList.add("backpack");
-  newArticle.setAttribute("id", "everyday");
-  newArticle.innerHTML = `
+const myView = backpackObjectArray.map((backpack) => {
+  const backpackArticle = document.createElement("article");
+  backpackArticle.classList.add("backpack");
+  backpackArticle.setAttribute("id", "everyday");
+  backpackArticle.innerHTML = `
   <figure class="backpack__image">
-    <img src=${item.image} alt="" />
+    <img src=${backpack.image} alt="" />
   </figure>
-  <h1 class="backpack__name">${item.name}</h1>
+  <h1 class="backpack__name">${backpack.name}</h1>
   <ul class="backpack__features">
     <li class="packprop backpack__volume">Volume:<span> ${
-      item.volume
+      backpack.volume
     }l</span></li>
-    <li class="packprop backpack__color">Color:<span> ${item.color}</span></li>
-    <li class="backpack__age">Age:<span> ${item.backpackAge()} days old</span></li>
+    <li class="packprop backpack__color">Color:<span> ${
+      backpack.color
+    }</span></li>
+    <li class="backpack__age">Age:<span> ${backpack.backpackAge()} days old</span></li>
     <li class="packprop backpack__pockets">Number of pockets:<span> ${
-      item.pocketNum
+      backpack.pocketNum
     }</span></li>
     <li class="packprop backpack__strap">Left strap length:<span> ${
-      item.strapLength.left
+      backpack.strapLength.left
     } inches</span></li>
     <li class="packprop backpack__strap">Right strap length:<span> ${
-      item.strapLength.right
+      backpack.strapLength.right
     } inches</span></li>
     <li class="feature backpack__lid">Lid status:<span> ${
-      item.lidOpen ? "open" : "closed"
+      backpack.lidOpen ? "open" : "closed"
     }</span></li>
   </ul>
 
 `;
-  return newArticle;
+  return backpackArticle;
 });
 
-myView.forEach((item) => {
-  main.append(item);
+myView.forEach((backpack) => {
+  main.append(backpack);
 });
