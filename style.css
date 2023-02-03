@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-size: 62.5%;
+}
+
+.wrapper{
+    text-align: center;
+    margin: 0 2rem;
+    padding: 5rem;
+}
+
+.wrapper h1 {
+    padding: 2rem;
+    font-size: 8rem;
+}
+
+.wordle-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    width: 45rem;
+    height: 45rem;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.wordle-container .wordle-cell{
+    border: 1px solid rgb(68, 65, 65);
+}
